@@ -13,7 +13,7 @@ import first.robot.mechanisms.ExampleMechanism;
 public class Robot extends OpModeRobot {
   final ExampleMechanism exampleMechanism = new ExampleMechanism();
   final CommandGamepad exampleController =
-      new CommandGamepad(DriverConstants.DRIVER_CONTROLLER_PORT);
+  new CommandGamepad(DriverConstants.DRIVER_CONTROLLER_PORT);
 
   public Robot() {}
 
