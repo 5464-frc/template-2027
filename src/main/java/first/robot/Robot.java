@@ -21,4 +21,9 @@ public class Robot extends OpModeRobot {
   public void robotPeriodic() {
     Scheduler.getDefault().run();
   }
+
+  @Override
+  public void simulationPeriodic(){
+    System.out.println("I HATE NOT JACK");
+  }
 }
