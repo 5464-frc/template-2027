@@ -1,0 +1,12 @@
+
+[tasks.format]
+run = "bash FORMAT.sh"
+[tasks.build]
+run = "./gradlew :build"
+[tasks.dokka]
+run = "./gradlew :dokkaGenerateHtml"
+[tasks.host]
+run = "mise exec python@3.15.2 -- \"python\" \"-m\" \"http.server\" \"8080\" \"--directory\" \"build/dokka/html\""
+
+[tools]
+python = "3.15.2"
