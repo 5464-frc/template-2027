@@ -4,12 +4,12 @@
 
 package first.robot;
 
+import org.wpilib.opmode.Autonomous;
 import org.wpilib.opmode.OpMode;
-import org.wpilib.opmode.Teleop;
 
-@Teleop
-public class ExampleTeleop implements OpMode {
-  public ExampleTeleop(Robot robot) {
-    robot.exampleController.rightStick().whileTrue(robot.exampleMechanism.exampleCommand());
+@Autonomous
+public class ExampleAuto implements OpMode {
+  public ExampleAuto(Robot robot) {
+    // robot.exampleMechanism.exampleCondition.whileTrue(robot.exampleMechanism.exampleCommand());
   }
 }
