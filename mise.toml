@@ -10,3 +10,4 @@ run = "mise exec python@3.15.2 -- \"python\" \"-m\" \"http.server\" \"8080\" \"-
 
 [tools]
 python = "3.15.2"
+watchexec = "latest"
