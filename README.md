@@ -5,7 +5,7 @@ started on WPILIB 2027 alpha 8, artifacts may exist
 - `Command` creation is abstracted to `CommandFactory` to avoid new programmers having to deal with lambda syntax and declaration.
 - `*.bak` files were created with the project, and serve only as reference
 - mise is used primarily for node version management and shell script wrapping. JDK is provided by WPILib, and shouldn't be specified there
-- [FORMAT.sh](FORMAT.sh) should be periodically ran. the syntax highlighting is already specified in [.vscode/](.vscode/), but it's still a good habit
+- [FORMAT.sh](FORMAT.sh) should be periodically ran. the syntax/linting is already specified in [.vscode/](.vscode/), but it's still a good habit
 - compilation is tested on push, so please only do as such periodically (either upon request / at the end of session)
 ## examples
 contents of the [examples/](src/main/java/first/examples) should **not** be used in production builds, they mainly serve to demonstrate implimentation and syntax.
