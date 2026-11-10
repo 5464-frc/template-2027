@@ -3,8 +3,8 @@ package first.robot.examples.mechanisms;
 import org.wpilib.command3.Coroutine;
 import first.robot.CommandFactory;
 
-/*
-    example code of CommandFactory implimentation
+/**
+ *  example code of CommandFactory implimentation
  */
 public class Command implements CommandFactory {
   @Override
