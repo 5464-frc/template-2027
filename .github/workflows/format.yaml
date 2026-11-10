@@ -31,4 +31,4 @@ jobs:
       run: chmod +x gradlew
     # Ensure formatting consistent
     - name: Run formatting check
-      run: ./gradlew :spotlessCheck
+      run: ./gradlew :spotlessCheck --no-configuration-cache
