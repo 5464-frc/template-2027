@@ -13,7 +13,7 @@ import org.wpilib.command3.Mechanism;
  *    implimentation specified in {@link examples/mechanisms/Command.java}
  */
 public interface CommandFactory {
-  public default Set<Mechanism> requiredSet() {
+  public default Set<Mechanism> commandRequired() {
     return Collections.emptySet();
   }
 
@@ -26,7 +26,7 @@ public interface CommandFactory {
   public default Command commandInvoke() {
     return new Command() {
       public java.util.Set<Mechanism> requirements() {
-        return requiredSet();
+        return commandRequired();
       }
 
       public void run(Coroutine coroutine) {

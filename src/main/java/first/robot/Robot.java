@@ -4,11 +4,13 @@
 package first.robot;
 
 import org.wpilib.command3.Scheduler;
-import org.wpilib.command3.button.CommandGamepad;
+import org.wpilib.command3.Trigger;
 import org.wpilib.framework.OpModeRobot;
-import first.robot.constants.DriverConstants;
+import first.robot.mechanisms.Clock;
 
 public class Robot extends OpModeRobot {
+  public final Clock m_Clock = new Clock();
+
   public Robot() {
   }
 
