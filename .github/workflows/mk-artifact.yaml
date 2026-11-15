@@ -29,7 +29,7 @@ jobs:
     - name: Run Dokka
       run: ./gradlew :dokkaGenerateHtml
     - name: 'Archive'
-      uses: actions/upload-artifacts@v4
+      uses: actions/upload-artifact@v4
       with:
           name: dokka-build-html
           path: build/dokka/html/
