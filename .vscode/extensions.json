@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "hverlin.mise-vscode",
-        "richardwillis.vscode-spotless-gradle"
+        "richardwillis.vscode-spotless-gradle",
+        "harshithraj.javadoc-auto-generator"
     ]
 }

@@ -12,6 +12,9 @@ import org.wpilib.framework.RobotBase;
  * call.
  */
 public final class Main {
+  /**
+   * Constructs a new main instance.
+   */
   private Main() {}
 
   /**

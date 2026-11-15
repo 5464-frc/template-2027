@@ -1,6 +1,5 @@
 package first.robot.mechanisms;
 
-import java.util.Set;
 import org.wpilib.command3.Command;
 import org.wpilib.command3.Coroutine;
 import org.wpilib.command3.Mechanism;
@@ -14,11 +13,21 @@ public class Clock implements Mechanism {
    * - invocation prints the clock state and iterates
    */
   public class Iterate implements CommandFactory {
+    /**
+     * Command names.
+     *
+     * @return the resulting string
+     */
     @Override
     public String commandName() {
       return "iterate";
     }
 
+    /**
+     * Command runs.
+     *
+     * @param coroutine coroutine
+     */
     @Override
     public void commandRun(Coroutine coroutine) {
       int i = 0;
