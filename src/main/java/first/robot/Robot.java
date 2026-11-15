@@ -6,14 +6,15 @@ package first.robot;
 import org.wpilib.command3.Scheduler;
 import org.wpilib.command3.Trigger;
 import org.wpilib.framework.OpModeRobot;
-
-import first.robot.examples.mechanisms.Command;
+import first.robot.SimTrigger;
 import first.robot.mechanisms.Clock;
-import dev.doglog.*;
+import dev.doglog.DogLog;
+import dev.doglog.DogLogOptions;
 
 public class Robot extends OpModeRobot {
   public final Clock m_Clock = new Clock();
-  public final Trigger clock_trigger = new Trigger(() -> true);
+  public final SimTrigger simTrigger = new SimTrigger(false, "Clock Trigger (sim)");
+  public final Trigger clock_trigger = new Trigger(simTrigger.call());
 
   /**
    * Constructs a new robot instance.

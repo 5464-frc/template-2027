@@ -30,12 +30,10 @@ public class Clock implements Mechanism {
      */
     @Override
     public void commandRun(Coroutine coroutine) {
-      int i = 0;
-      while (i < 10) {
-        System.out.println(i);
-        i++;
-        coroutine.yield();
-      }
+      count++;
+      System.out.println("Clock count:" + count);
+      // not needed at the end of every commandRun; only use in for/while loops
+      // coroutine.yield();
     }
   }
 
