@@ -11,10 +11,10 @@ import org.wpilib.hardware.hal.HALUtil;
 import dev.doglog.DogLog;
 
 /**
- *    work around to having to deal with lambda expressions <br>
- *    specify name, run function, and requireSet before invoking <br>
- *    this is overly verbose relative to the documentation preferred syntax, but is easier to read <br>
- *    implimentation specified in {@link examples/mechanisms/Command.java}
+ * work around to having to deal with lambda expressions <br>
+ * specify name, run function, and requireSet before invoking <br>
+ * this is overly verbose relative to the documentation preferred syntax, but is easier to read <br>
+ * implimentation specified in {@link examples/mechanisms/Command.java}
  */
 public interface CommandFactory {
   /**
