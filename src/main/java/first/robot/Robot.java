@@ -4,18 +4,24 @@
 package first.robot;
 
 import org.wpilib.command3.Scheduler;
+import org.wpilib.command3.Trigger;
 import org.wpilib.framework.OpModeRobot;
+
+import first.robot.examples.mechanisms.Command;
 import first.robot.mechanisms.Clock;
 import dev.doglog.*;
 
 public class Robot extends OpModeRobot {
   public final Clock m_Clock = new Clock();
+  public final Trigger clock_trigger = new Trigger(() -> true);
 
   /**
    * Constructs a new robot instance.
    */
   public Robot() {
     DogLog.setOptions(new DogLogOptions().withCaptureDs(true));
+
+    clock_trigger.onTrue(m_Clock.timed_iterate);
   }
 
   /**

@@ -12,7 +12,7 @@ public class Clock implements Mechanism {
    * Iterate
    * - invocation prints the clock state and iterates
    */
-  public class Iterate implements CommandFactory {
+  private final class Iterate implements CommandFactory {
     /**
      * Command names.
      *
@@ -40,4 +40,5 @@ public class Clock implements Mechanism {
   }
 
   public Command iterate = new Iterate().commandInvoke();
+  public Command timed_iterate = new Iterate().timedCommandInvoke("Timed Command Test");
 }
