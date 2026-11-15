@@ -6,6 +6,7 @@ package first.robot;
 import org.wpilib.command3.Scheduler;
 import org.wpilib.framework.OpModeRobot;
 import first.robot.mechanisms.Clock;
+import dev.doglog.*;
 
 public class Robot extends OpModeRobot {
   public final Clock m_Clock = new Clock();
@@ -14,7 +15,7 @@ public class Robot extends OpModeRobot {
    * Constructs a new robot instance.
    */
   public Robot() {
-    //empty
+    DogLog.setOptions(new DogLogOptions().withCaptureDs(true));
   }
 
   /**
