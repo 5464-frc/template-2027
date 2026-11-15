@@ -32,5 +32,5 @@ jobs:
       uses: actions/upload-artifacts@v4
       with:
           name: dokka-build-html
-          path: build/dokka/html
+          path: build/dokka/html/
           retention-days: 14
