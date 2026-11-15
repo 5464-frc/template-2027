@@ -1,4 +1,4 @@
-package first.robot.mechanisms;
+package first.robot.examples.mechanisms;
 
 import org.wpilib.command3.Command;
 import org.wpilib.command3.Coroutine;
