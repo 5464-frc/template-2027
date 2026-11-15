@@ -2,7 +2,6 @@ package first.robot;
 
 import java.util.Collections;
 import java.util.Set;
-
 import org.jspecify.annotations.NonNull;
 import org.wpilib.command3.Command;
 import org.wpilib.command3.Coroutine;
@@ -58,6 +57,7 @@ public interface CommandFactory {
       public void run(Coroutine coroutine) {
         commandRun(coroutine);
       }
+
       public String name() {
         return commandName();
       }
@@ -66,7 +66,7 @@ public interface CommandFactory {
 
   /**
    * same as {@link commandInvoke}, but times the Command and logs to DogLog
-   * @param key
+   * @param key name of DogLog.log
    * @return
    */
   default Command timedCommandInvoke(@NonNull String key) {
@@ -78,9 +78,10 @@ public interface CommandFactory {
       public void run(Coroutine coroutine) {
         var startTime = HALUtil.getMonotonicTime();
         coroutine.await(commandInvoke());
-        var endTime = HALUtil.getMonotonicTime()-startTime;
+        var endTime = HALUtil.getMonotonicTime() - startTime;
         DogLog.log(key, endTime, "nanosecond");
       }
+
       public String name() {
         return commandName();
       }
