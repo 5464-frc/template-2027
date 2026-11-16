@@ -12,22 +12,31 @@ public class Clock implements Mechanism {
    * Iterate
    * - invocation prints the clock state and iterates
    */
-  public class Iterate implements CommandFactory {
+  private final class Iterate implements CommandFactory {
+    /**
+     * Command names.
+     *
+     * @return the resulting string
+     */
     @Override
     public String commandName() {
       return "iterate";
     }
 
+    /**
+     * Command runs.
+     *
+     * @param coroutine coroutine
+     */
     @Override
     public void commandRun(Coroutine coroutine) {
-      int i = 0;
-      while (i < 10) {
-        System.out.println(i);
-        i++;
-        coroutine.yield();
-      }
+      count++;
+      System.out.println("Clock count:" + count);
+      // not needed at the end of every commandRun; only use in for/while loops
+      // coroutine.yield();
     }
   }
 
   public Command iterate = new Iterate().commandInvoke();
+  public Command timed_iterate = new Iterate().timedCommandInvoke("Timed Command Test");
 }
