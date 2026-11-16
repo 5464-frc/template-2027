@@ -4,6 +4,7 @@
 package first.robot;
 
 import org.wpilib.command3.Scheduler;
+import org.wpilib.command3.Trigger;
 import org.wpilib.framework.OpModeRobot;
 import dev.doglog.DogLog;
 import dev.doglog.DogLogOptions;
