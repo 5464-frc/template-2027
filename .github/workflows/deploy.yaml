@@ -26,11 +26,10 @@ jobs:
     - name: Run Dokka
       run: ./gradlew :dokkaGenerateHtml
     - name: 'Archive'
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-pages-artifact@v3
       with:
           name: github-pages
           path: build/dokka/html/
-          retention-days: 14
   # Deploy job
   deploy:
     # Add a dependency to the build job
