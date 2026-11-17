@@ -1,3 +1,4 @@
+name: sync-template
 on:
   workflow_dispatch:
 jobs:
